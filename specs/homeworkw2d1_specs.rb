@@ -39,9 +39,6 @@ class TestSportsTeam < MiniTest::Test
 
   def setup()
     @sports_team = SportsTeam.new("Scotland", ["Andy Robertson", "Leigh Griffiths", "Kieran Tierney"], "Alex McLeish")
-    # @team_name = "Scotland"
-    # @players = ["Andy Robertson", "Leigh Griffiths", "Kieran Tierney"]
-    # @coach = "Alex McLeish"
   end
 
   def test_team_name
@@ -59,6 +56,11 @@ class TestSportsTeam < MiniTest::Test
   def test_set_coach_name()
     @sports_team.coach = "Gordon Strachan"
     assert_equal("Gordon Strachan", @sports_team.coach)
+  end
+
+  def test_add_player_to_array()
+    @sports_team.players << "Scott Brown"
+    assert_equal(["Andy Robertson", "Leigh Griffiths", "Kieran Tierney", "Scott Brown"], @sports_team.players)
   end
 
 end
