@@ -15,6 +15,16 @@ class TestStudent < MiniTest::Test
     assert_equal(5, @student.cohort)
   end
 
+  def test_set_student_name()
+    @student.student_name = "Bob"
+    assert_equal("Bob", @student.student_name)
+  end
+
+  def test_set_student_cohort()
+    @student.cohort = 6
+    assert_equal(6, @student.cohort)
+  end
+
   def test_speaking()
     assert_equal("I can talk", @student.student_talks)
   end
@@ -44,6 +54,11 @@ class TestSportsTeam < MiniTest::Test
 
   def test_coach
     assert_equal("Alex McLeish", @sports_team.coach)
+  end
+
+  def test_set_coach_name()
+    @sports_team.coach = "Gordon Strachan"
+    assert_equal("Gordon Strachan", @sports_team.coach)
   end
 
 end
