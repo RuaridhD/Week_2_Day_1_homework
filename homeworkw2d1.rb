@@ -49,6 +49,15 @@ def initialize(team_name, players, coach)
   @coach = coach
 end
 
+def check_player_in_array(name)
+  # name = "Andy Robertson"
+  for player in @sports_team.players
+    if player == name
+      return player
+    end
+  end
+end
+
 # def team_name()
 #   return @team_name
 # end

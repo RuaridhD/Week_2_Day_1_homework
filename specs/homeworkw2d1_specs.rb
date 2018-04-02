@@ -63,4 +63,8 @@ class TestSportsTeam < MiniTest::Test
     assert_equal(["Andy Robertson", "Leigh Griffiths", "Kieran Tierney", "Scott Brown"], @sports_team.players)
   end
 
+  def test_check_player_in_array()
+    name = ("Andy Robertson")
+    assert_equal("Andy Robertson", name)
+  end
 end
